@@ -28,9 +28,9 @@ app.post("/create-payment", async (req, res) => {
             merchantId: MERCHANT_ID,
             merchantTransactionId: transactionId, // Note: Key might be "merchantTransactionId"
             amount: amount * 100,
-            redirectUrl: "http://localhost:5173/success",
+            redirectUrl: "https://greenbacksmicroservices.com/success",
             redirectMode: "REDIRECT", // Add required field
-            callbackUrl: "http://localhost:5000/payment-status",
+            callbackUrl: "https://phonepay-pa.vercel.app/payment-status",
             paymentInstrument: { type: "PAY_PAGE" } // Add required field
         };
 
